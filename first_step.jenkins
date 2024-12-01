@@ -3,6 +3,9 @@
 propertis([disableConcurrentBuilds()])
 
 pipeline {
+    agent {
+        agent any
+    }
     options {
         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
         timestamps()
